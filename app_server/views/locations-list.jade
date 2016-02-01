@@ -1,5 +1,6 @@
-﻿extends layout
-
+﻿
+extends layout
+include _includes/sharedHTMLfunctions
 block content
   #banner.page-header
       .row
@@ -15,11 +16,7 @@ block content
                     h4
                         a(href="/location")= location.name
                         small &nbsp
-                            span.glyphicon.glyphicon-star
-                            span.glyphicon.glyphicon-star
-                            span.glyphicon.glyphicon-star
-                            span.glyphicon.glyphicon-star-empty
-                            span.glyphicon.glyphicon-star-empty
+                            +outputRating(location.rating)
                         span.badge.pull-right.badge-default= location.distance
                     p.adress= location.adress
                     p
